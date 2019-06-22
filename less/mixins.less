@@ -1,4 +1,5 @@
 // Mixins Here
+
 .flex-styled(@justify, @align) {
     display: flex;
     justify-content: @justify;
@@ -33,17 +34,17 @@
 }
 
 .btn {
+
+    @media @phone {
+        .button-creator(@width: 100%)
+    }
     .button-creator();
 
     &:hover {
         animation: stripes-move 0.75s infinite linear;
         background: repeating-linear-gradient(45deg, rgb(35, 40, 57) 0, rgb(43, 125, 239) 0.25em, transparent 0.25em, transparent .5em);
-        cursor: pointer;
     }
 
-    @media @phone {
-        .button-creator(@width: 100%)
-    }
 }
 
 @keyframes stripes-move {
