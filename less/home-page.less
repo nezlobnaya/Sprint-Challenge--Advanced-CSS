@@ -1,5 +1,28 @@
 // Home Content
 
+.navigation {
+  width: 100%;
+  border-bottom: 2px solid @nav-border;
+  background: @nav-bg;
+  padding: 15px 0 4px 0;
+
+
+  h1 {
+      color:@header-font-color;
+      display:flex;
+      padding:0px 1.25%;
+      font-size: 4.4rem;
+      .flex-styled(center, center);
+      .keyframes(fade-in;{
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+        }); 
+      .animation(fade-in 0.2s linear infinite alternate);
+  }
+}
+
+
+
 .home {
 
   .intro {

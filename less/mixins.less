@@ -1,1 +1,53 @@
 // Mixins Here
+.flex-styled(@justify, @align) {
+    display: flex;
+    justify-content: @justify;
+    align-items: @align;
+  }
+
+
+.keyframes(@name; @arguments) {
+	@-moz-keyframes @name { @arguments(); }
+	@-webkit-keyframes @name { @arguments(); }
+	@keyframes @name { @arguments(); }
+}
+
+.animation(@arguments) {
+	-webkit-animation: @arguments;
+	-moz-animation: @arguments;
+	animation: @arguments;
+}
+
+.button-creator(@btncolor: rgb(35, 40, 57), @bordercolor: rgb(43, 125, 239), @width: 100px, @height: 50px, @mt: 15px) {
+    background: @btncolor;
+    border: 1px solid @bordercolor;
+    border-radius: 5px;
+    font-family: Helvetica, Arial, system-ui, Sans-Serif;
+    color: white;
+    font-size: 1.6rem;
+    margin-top: @mt;
+    padding: 1rem 2rem;
+    width: @width;
+    height: @height;
+    .flex-styled(center, center);
+}
+
+.btn {
+    .button-creator();
+
+    &:hover {
+        animation: stripes-move 0.75s infinite linear;
+        background: repeating-linear-gradient(45deg, rgb(35, 40, 57) 0, rgb(43, 125, 239) 0.25em, transparent 0.25em, transparent .5em);
+        cursor: pointer;
+    }
+
+    @media @phone {
+        .button-creator(@width: 100%)
+    }
+}
+
+@keyframes stripes-move {
+    100% {
+      background-position: 5em 0px;
+    }
+  }
