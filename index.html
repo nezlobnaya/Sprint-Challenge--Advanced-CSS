@@ -14,11 +14,13 @@
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
+  <script src="sticky.min.js"></script>
 </head>
 
 <body>
 
  <!-- navigation code here -->
+ <div class="selector" data-sticky>
  <section class="top-content">
     <h1>SpaceWalkers</h1>
     <nav>
@@ -29,7 +31,8 @@
       <a href="#">Sign In</a>
     </nav>
   </section>
-  
+ </div>
+ 
   <div class="container home">
 
     <header class="intro">
@@ -113,6 +116,15 @@
     <footer>
       <p>Copyright SpaceWalkers 2018</p>
     </footer>
+
+    <script src="../dist/sticky.compile.js"></script>
+
+    <script>
+
+      var sticky = new Sticky('[data-sticky]', {});
+
+    </script>
+
 
   </div>
 </body>
