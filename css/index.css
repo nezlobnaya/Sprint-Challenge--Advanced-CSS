@@ -1,0 +1,482 @@
+.btn {
+  background: #232839;
+  border: 1px solid #2b7def;
+  border-radius: 5px;
+  font-family: Helvetica, Arial, system-ui, Sans-Serif;
+  color: white;
+  font-size: 1.6rem;
+  margin-top: 15px;
+  padding: 1rem 2rem;
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width:500px) {
+  .btn {
+    background: #232839;
+    border: 1px solid #2b7def;
+    border-radius: 5px;
+    font-family: Helvetica, Arial, system-ui, Sans-Serif;
+    color: white;
+    font-size: 1.6rem;
+    margin-top: 15px;
+    padding: 1rem 2rem;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.btn:hover {
+  cursor: pointer;
+  animation: stripes-move 0.75s infinite linear;
+  background: repeating-linear-gradient(45deg, #232839 0, #2b7def 0.25em, transparent 0.25em, transparent 0.5em);
+}
+@keyframes stripes-move {
+  100% {
+    background-position: 5em 0px;
+  }
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+html,
+body {
+  font-family: 'Ubuntu', sans-serif;
+  color: #5E6164;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Russo One', sans-serif;
+  color: #23293B;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 2.8rem;
+}
+p {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 0% 18% 0px 18%;
+  width: 100%;
+}
+@media (max-width:500px) {
+  nav {
+    width: 100%;
+    padding: 8% 0px 0px 0px;
+  }
+}
+nav a {
+  text-decoration: none;
+  color: #5E6164;
+  font-size: 1.6rem;
+  margin: 3% 3% 1%;
+}
+nav a:hover {
+  color: #fcbb58;
+  cursor: pointer;
+}
+footer {
+  color: #22283B;
+  background: #f4f4f4;
+  padding: 20px 0;
+  border: 1px double #e0e0e0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  border-bottom: 2px solid #F1F1F1;
+  background: #e1e3e8;
+  padding: 0px 0 4px 0;
+}
+@media (max-width:500px) {
+  .top-content {
+    padding: 5px 0 8px 0;
+  }
+}
+.top-content h1 {
+  color: #23293B;
+  padding: 0.6% 0.5% 0% 0.5%;
+  font-size: 4.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: fade-in 0.2s linear infinite alternate;
+  -moz-animation: fade-in 0.2s linear infinite alternate;
+  animation: fade-in 0.2s linear infinite alternate;
+}
+@-moz-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (max-width:500px) {
+  .home {
+    margin: 0 auto;
+  }
+}
+.home .intro {
+  display: flex;
+  flex-flow: wrap;
+  margin-top: 13%;
+}
+@media (max-width:500px) {
+  .home .intro {
+    margin-top: 30%;
+  }
+}
+.home .intro h2 {
+  padding: 15px;
+}
+.home .intro p {
+  padding: 0 15px;
+}
+@media (max-width:500px) {
+  .home .intro p {
+    padding: 0 8px;
+  }
+}
+.home .space-images {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+@media (max-width:500px) {
+  .home .space-images .sky,
+  .home .space-images .launch {
+    display: none;
+  }
+}
+.home .space-images img {
+  width: 28%;
+  margin: 20px 2.5%;
+  border-radius: 20px;
+  height: 100%;
+}
+@media (max-width:500px) {
+  .home .space-images img {
+    width: 100%;
+  }
+}
+.home .visit-planets {
+  padding: 15px;
+}
+.home .visit-planets h3 {
+  margin-top: 11px;
+}
+.home .visit-planets p {
+  margin-top: 13px;
+}
+.home .walk {
+  margin-top: 60px;
+  border-top: 1px solid #dee2e6;
+  padding: 50px 60px;
+  display: flex;
+  justify-content: center;
+}
+@media (max-width:500px) {
+  .home .walk {
+    margin-top: 10px;
+    padding: 15px;
+    flex-flow: wrap-reverse;
+  }
+}
+.home .walk .walk-text {
+  width: 50%;
+}
+@media (max-width:500px) {
+  .home .walk .walk-text {
+    width: 100%;
+    padding-top: 1%;
+  }
+}
+.home .walk .walk-text h3 {
+  margin: 10px 10px;
+}
+.home .walk .walk-text p {
+  margin-bottom: 26px;
+}
+.home .walk .walk-text .btn {
+  width: 30%;
+}
+@media (max-width:500px) {
+  .home .walk .walk-text .btn {
+    width: 100%;
+  }
+}
+.home .walk .walk-img {
+  width: 46%;
+  margin-left: 4%;
+}
+@media (max-width:500px) {
+  .home .walk .walk-img {
+    width: 100%;
+    margin-left: 0%;
+  }
+}
+.home .walk .walk-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.home form {
+  /* Just to center the form on the page */
+  margin: 0 auto;
+  width: 100%;
+  /* To see the outline of the form */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+  background-color: #b5b6b7;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+@media (max-width:500px) {
+  .home form {
+    width: 100%;
+    padding: 0 3% 0 5%;
+    font-size: 1.8rem;
+  }
+}
+.home form form div + div {
+  margin-top: 1em;
+}
+.home form label {
+  /* To make sure that all labels have the same size and are properly aligned */
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+}
+.home form input,
+.home form textarea {
+  /* To make sure that all text fields have the same font settings
+         By default, textareas have a monospace font */
+  font: 1em sans-serif;
+  background-color: #eaedef;
+  /* To give the same size to all text fields */
+  width: 300px;
+  box-sizing: border-box;
+  /* To harmonize the look & feel of text field border */
+  border: 1px solid #999;
+}
+.home form input:focus,
+.home form textarea:focus {
+  /* To give a little highlight on active elements */
+  border-color: #000;
+}
+.home form textarea {
+  /* To properly align multiline text fields with their labels */
+  vertical-align: top;
+  /* To give enough room to type some text */
+  height: 5em;
+}
+.home form .button {
+  /* To position the buttons to the same position of the text fields */
+  padding-left: 90px;
+  /* same size as the label elements */
+}
+.home form button {
+  /* This extra margin represent roughly the same space as the space
+         between the labels and their text fields */
+  margin-left: 0.5em;
+  height: 3rem;
+  border-radius: 1rem;
+  background-color: #266325;
+  color: white;
+  font-size: 1.5rem;
+}
+.home form button:hover {
+  color: #efcf4c;
+  cursor: pointer;
+}
+@media (max-width:500px) {
+  .home form button {
+    background: #2aa2b7;
+    border: 1px solid #2b7def;
+    border-radius: 5px;
+    font-family: Helvetica, Arial, system-ui, Sans-Serif;
+    color: white;
+    font-size: 1.6rem;
+    margin-top: 15px;
+    padding: 1rem 2rem;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

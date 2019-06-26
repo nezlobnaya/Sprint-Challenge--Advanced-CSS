@@ -3,6 +3,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <!-- Added viewport meta tag -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>SpaceWalkers</title>
 
@@ -12,16 +14,30 @@
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
+  <script src="sticky.min.js"></script>
 </head>
 
 <body>
 
  <!-- navigation code here -->
-
+ <div class="selector" data-sticky>
+ <section class="top-content">
+    <h1>SpaceWalkers</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+      <a href="#">Sign In</a>
+    </nav>
+  </section>
+ </div>
+ 
   <div class="container home">
 
     <header class="intro">
        <!-- image code here -->
+       <img src="img/main-header.png" alt="Space view of Earth">
 
       <h2>Lift Off</h2>
     
@@ -62,9 +78,53 @@
 
     </section>
 
+    <div class="Subscribe">
+      <h2>Subscribe to Spacewalkers Magazine!</h2>
+      <form action="/my-handling-form-page" method="post">
+        <div>
+          <label for="frmNameA">Name</label>
+          <input type="text" name="name" id="frmNameA"
+          placeholder="Full name" required autocomplete="name">
+        </div>
+        <div>
+          <label for="frmEmailA">Email</label>
+          <input type="email" name="email" id="frmEmailA"
+          placeholder="name@example.com" required autocomplete="email">
+        </div>
+        <div>
+          <label for="frmPhoneNumA">Phone</label>
+          <input type="tel" name="phone" id="frmPhoneNumA"
+          placeholder="+1-555-555-1212" required autocomplete="tel">
+        </div>
+      
+        <div>
+          <label for="frmMessageA">Your message<br></label>
+          <textarea id="frmMessageA" name="Message" placeholder="Special instructions or requests"></textarea>
+        </div>
+         <div class="pure-controls">
+               <label for="cb" class="pure-checkbox">
+               <input id="cb" type="checkbox">Subscribe to our newsletter</label>
+        </div>
+        
+        <div class="button">
+        <button type="submit">Subscribe</button>
+      </div>
+     </form>
+    </div>
+    </div>
+
     <footer>
       <p>Copyright SpaceWalkers 2018</p>
     </footer>
+
+    <script src="../dist/sticky.compile.js"></script>
+
+    <script>
+
+      var sticky = new Sticky('[data-sticky]', {});
+
+    </script>
+
 
   </div>
 </body>
